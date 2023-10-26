@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YourYinYang</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./fonts/stylesheet.css">
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body class="min-h-screen overflow-x-hidden">
+    <div id="page-cover" class="bg-black hidden opacity-0 z-[39] fixed top-0 left-0 w-screen h-screen">overlay</div>
+    <nav class="navbar fixed lg:relative w-full left-0 top-0 h-auto z-50">
+        <div class="absolute bg-white w-full flex z-50 justify-between items-center px-4 py-4 pr-8 md:pr-16 lg:bg-white lg:top-20 lg:w-11/12 lg:right-0 lg:h-32 lg:p-0">
+            <a href="./index.html" class="max-w-[225px]">
+                <picture>
+                    <source media="(min-width:1024px)" srcset="./images/logo-tekst-rechts--rood.svg">
+                    <source media="(min-width:768px)" srcset="./images/logo--rood.svg">
+                    <img src="./images/logo-tekst-rechts--rood.svg" alt="Logo YourYinYang" class="h-16 md:h-20 md:ml-8 xl:h-32">
+                </picture>
+            </a>
+            <div class="block w-8 lg:hidden flex justify-center items-center">
+                <div class="w-8 mobile-menu-button block lg:hidden text-center item-center relative">
+                    <span class="icon-top w-full h-1 bg-[#B51729] block w-9 relative rounded origin-center "></span>
+                    <span class="icon-center w-full h-1 bg-[#B51729] block w-9 relative rounded origin-center my-2"></span>
+                    <span class="icon-bottom w-full h-1 bg-[#B51729] block w-9 relative rounded origin-center"></span>
+                </div>
+            </div>
+            <div class="hidden lg:block">
+                <ul class="flex flex-row pr-8 lg:pr-12 xl:pr-20">
+                    <li class="mx-2.5 lg:mx-4"><a class="hover:opacity-50 duration-150" href="./effecten.html">Effecten</a></li>
+                    <li class="mx-2.5 lg:mx-4"><a class="hover:opacity-50 duration-150" href="./over-mij.html">Over mij</a></li>
+                    <li class="mx-2.5 lg:mx-4 relative">
+                        <details class="myDropdown">
+                            <summary class="flex hover:cursor-pointer">
+                                Mijn specialisaties
+                                <img src="./images/arrow.svg" alt="Arrow icon" class="-rotate-90 w-2 ml-2">
+                            </summary>
+                            <div class="dropdown-wrapper z-40 absolute bg-white top-full w-auto mt-2 left-0 shadow-lg p-4">
+                                <ul>
+                                    <li class="mb-4"><a class="hover:opacity-50 duration-150" href="./gezondheidsklachten.html">Gezondheidsklachten</a></li>
+                                    <li class="mb-4"><a class="hover:opacity-50 duration-150" href="./lichaamsgericht-werken.html">Lichaamsgericht werken</a></li>
+                                    <li class="mb-4"><a class="hover:opacity-50 duration-150" href="./natuurgerichte-principes.html">Natuurgerichte principes</a></li>
+                                </ul>
+                            </div>
+                        </details>
+                    </li>
+                    <li class="mx-2.5 lg:mx-4"><a class="hover:opacity-50 duration-150" href="./contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="mobile-menu lg:hidden absolute -top-52 md:-top-64 left-0 h-52 md:h-64 w-screen bg-white z-40">
+            <ul class="flex invisible flex-col items-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                <li class="mx-2.5 mb-6 lg:mx-4"><a class="hover:opacity-50 duration-150" href="./effecten.html">Effecten</a></li>
+                <li class="mx-2.5 mb-6 lg:mx-4"><a class="hover:opacity-50 duration-150" href="./over-mij.html">Over mij</a></li>
+                <li class="mx-2.5 mb-6 lg:mx-4 relative">
+                    <details class="myDropdown">
+                        <summary class="flex">
+                            Mijn specialisaties
+                            <img src="./images/arrow.svg" alt="Arrow icon" class="-rotate-90 w-2 ml-2">
+                        </summary>
+                        <div class="dropdown-wrapper absolute bg-white top-full left-0 shadow-lg p-4">
+                            <ul>
+                                <li class="mb-5"><a class="hover:opacity-50 duration-150" href="./gezondheidsklachten.html">Gezondheidsklachten</a></li>
+                                <li class="mb-5"><a class="hover:opacity-50 duration-150" href="./lichaamsgericht-werken.html">Lichaamsgericht werken</a></li>
+                                <li class="mb-5"><a class="hover:opacity-50 duration-150" href="./natuurgerichte-principes.html">Natuurgerichte principes</a></li>
+                            </ul>
+                        </div>
+                    </details>
+                </li>
+                <li class="mx-2.5 mb-6 lg:mx-4"><a class="hover:opacity-50 duration-150" href="./contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- <div class="site-message fixed bg-[#B51729] z-50 text-white libre text-xl w-screen h-screen top-0 left-0 text-center justify-center items-center">Deze site graag in portretmodus bekijken</div> -->
+
+    <!-- Hero image -->
+    <div id="main-hero" class="h-screen relative w-full mb-12 md:mb-0">
+        <div class="absolute top-0 left-0 w-full h-full bg-[url('./images/hero-image.jpg')] bg-cover bg-center md:w-1/2"></div>
+        <div class="bg-white opacity-25 absolute top-0 left-0 w-full h-full"></div>
+        <div class="absolute top-[35%] left-0 w-full px-4 md:left-1/2 md:w-1/2 ">
+            <h1 class="font-bold mb-20 text-4xl leading-[3.5rem] text-[#B51729] text-center libre xl:text-5xl xl:leading-[4.5rem]">Een gezonder<br> en energieker gevoel</h1>
+            <p class="text-center px-6 max-w-sm mx-auto">Heb je lichamelijke en/of psychische gezondheidsklachten en wil je werken aan herstel?
+            </p>
+            <a href="./effecten.html" class="px-8 py-3 bg-[#B51729] text-white absolute -bottom-32 left-1/2 -translate-x-1/2 libre text-center hover:opacity-50 duration-150 ">Ja, dat wil ik!</a>
+        </div>
+    </div>
+    <div id="wie-ben-ik" class="container relative mx-auto px-6 mb-12 md:mt-12 lg:mt-0 lg:float-left lg:w-1/2 lg:py-12 lg:mb-0 lg:px-12 lg:pl-20">
+        <div class="relative w-8/12">
+            <img src="./images/portretfoto.jpg" alt="">
+            <div class="absolute w-full h-full opacity-25 bg-white top-0 left-0"></div>
+        </div>
+        <div class="relative -mt-24 left-1/2 w-6/12 sm:absolute sm:top-1/2 sm:-translate-y-1/2 sm:mt-0 md:absolute md:right-0 md:top-1/2 md:-translate-y-1/2 lg:absolute lg:top-1/2 lg:pr-12 lg:-translate-y-1/2 lg:mt-0 lg:ml-10">
+            <h2 class="font-bold text-xl mb-4 text-[#2e2e2e] libre lg:text-2xl">Ontmoet Mattie</h2>
+            <p class="max-w-sm mx-auto mb-8 pr-0 text-[#2e2e2e] lg:text-base md:mx-0">Natuurgeneeskundig therapeut
+            </p>
+            <a href="./over-mij.html" class="px-4 lg:px-8 py-3 bg-[#B51729] text-white libre lg:text-base text-center hover:opacity-50 duration-150 ">Vertel me meer</a>
+        </div>
+    </div>
+    <div id="specialisaties" class="bg-[#E09DA5] min-h-[350px] w-full py-12 lg:float-left lg:w-1/2 relative">
+        <div class="lg:relative lg:left-1/2 lg:top-1/2 lg:-translate-y-1/2 lg:-translate-x-1/2 lg:w-full">
+            <h2 class="text-3xl font-bold text-center text-white mb-8 libre">Mijn specialisaties</h2>
+            <div class="flex justify-between flex-col sm:flex-row sm:px-12 sm:max-w-2xl sm:mx-auto md:px-0">
+                <a href="./gezondheidsklachten.html" class="hover:opacity-75 duration-150 w-auto">
+                    <div class="bg-[url('./images/nekpijn.jpeg')] bg-center bg-cover w-40 md:w-36 h-40 md:h-36 mb-8 relative mx-auto rounded-full lg:mx-2 lg:mx-5 ">
+                        <div class="absolute top-0 left-0 w-full h-full bg-black opacity-50 rounded-full"></div>
+                        <h3 class="break-all text-white block text-lg text-center absolute top-1/2 -translate-y-1/2 w-[90%] ml-[5%] md:w-full md:ml-0 libre lg:text-sm xl:text-md">Gezondheids-<br>klachten</h3>
+                    </div>
+                </a>
+                <a href="./lichaamsgericht-werken.html" class="hover:opacity-75 duration-150 w-auto">
+                    <div class="bg-[url('./images/beenmassage.jpg')] bg-center bg-cover w-40 md:w-36 h-40 md:h-36 mb-8 relative mx-auto rounded-full md:mx-2 lg:mx-5">
+                        <div class="absolute top-0 left-0 w-full h-full bg-black opacity-50 rounded-full"></div>
+                        <h3 class="break-all text-white block text-lg text-center absolute top-1/2 -translate-y-1/2 w-[90%] ml-[5%] md:w-full md:ml-0 libre lg:text-sm xl:text-md">Lichaams-<br>gericht<br> werken</h3>
+                    </div>
+                </a>
+                <a href="./natuurgerichte-principes.html" class="hover:opacity-75 duration-150 w-auto">
+                    <div class="bg-white bg-[url('./images/batc-bloem.jpg')] bg-center bg-cover bg-no-repeat w-40 md:w-36 h-40 md:h-36 relative mx-auto rounded-full md:mx-2 lg:mx-5">
+                        <div class="absolute top-0 left-0 w-full h-full bg-black opacity-50 rounded-full"></div>
+                        <h3 class="break-all text-white block text-lg text-center absolute top-1/2 -translate-y-1/2 w-[90%] ml-[5%] md:w-full md:ml-0 libre lg:text-sm xl:text-md">Natuur-<br>gerichte<br> principes</h3>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="clear-both"></div>
+    <div class="bg-[url('./images/ruimte.png')] bg-cover relative bg-center relative pb-12 pt-16">
+        <div class="absolute z-10 top-0 left-0 w-full h-full bg-black opacity-[0.35]"></div>
+        <h3 class="z-20 relative px-12 text-white text-center text-3xl font-bold mb-24 libre">Samen stappen zetten</h3>
+        <a href="./contact.html" class="z-20 px-8 py-3 mx-0 bg-[#B51729] absolute bottom-12 left-1/2 -translate-x-1/2 text-white libre text-center hover:opacity-80 duration-150">Ja, ik wil meer ruimte!</a>
+    </div>
+    <div class="py-4 mx-auto container max-w-xl sm:flex sm:justify-around">
+        <span class="w-auto text-center block sm:float-left">06-12144084</span>
+        <div class="w-auto text-center block sm:float-left pt-4 sm:p-0">
+            <span class="mb-20">
+                info@youryinyang.nl
+            </span>
+            <div class="pt-2">
+                <a href="https://www.linkedin.com/in/mattie-janssen-5b106b7/" target="_blank" class="underline mr-4 hover:opacity-50 duration-150">
+                    LinkedIn
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=100065915088971" target="_blank" class="underline hover:opacity-50 duration-150">
+                    Facebook
+                </a>
+            </div>
+        </div>
+        <span class="w-auto text-center block sm:float-left pt-4 sm:p-0">kvk-nr 54294029</span>
+        <div class="clear-both hidden"></div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

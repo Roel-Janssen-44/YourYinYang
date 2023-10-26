@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YourYinYang</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./fonts/stylesheet.css">
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body class="min-h-screen overflow-x-hidden w-screen">
+    <!-- Navbar -->
+    <div id="page-cover" class="bg-black hidden opacity-0 z-[39] fixed top-0 left-0 w-screen h-screen">overlay</div>
+    <nav class="navbar fixed lg:relative w-full left-0 top-0 h-auto z-50">
+        <div class="absolute bg-white w-full flex z-50 justify-between items-center px-4 py-4 pr-8 md:pr-16 lg:bg-white lg:top-20 lg:w-11/12 lg:right-0 lg:h-32 lg:p-0">
+            <a href="./index.html" class="max-w-[225px]">
+                <picture>
+                    <source media="(min-width:1024px)" srcset="./images/logo-tekst-rechts--rood.svg">
+                    <source media="(min-width:768px)" srcset="./images/logo--rood.svg">
+                    <img src="./images/logo-tekst-rechts--rood.svg" alt="Logo YourYinYang" class="h-16 md:h-20 md:ml-8 xl:h-32">
+                </picture>
+            </a>
+            <div class="block w-8 lg:hidden flex justify-center items-center">
+                <div class="w-8 mobile-menu-button block lg:hidden text-center item-center relative">
+                    <span class="icon-top w-full h-1 bg-[#B51729] block w-9 relative rounded origin-center "></span>
+                    <span class="icon-center w-full h-1 bg-[#B51729] block w-9 relative rounded origin-center my-2"></span>
+                    <span class="icon-bottom w-full h-1 bg-[#B51729] block w-9 relative rounded origin-center"></span>
+                </div>
+            </div>
+            <div class="hidden lg:block">
+                <ul class="flex flex-row pr-8 lg:pr-12 xl:pr-20">
+                    <li class="mx-2.5 lg:mx-4"><a class="hover:opacity-50 duration-150" href="./effecten.html">Effecten</a></li>
+                    <li class="mx-2.5 lg:mx-4"><a class="hover:opacity-50 duration-150" href="./over-mij.html">Over mij</a></li>
+                    <li class="mx-2.5 lg:mx-4 relative">
+                        <details class="myDropdown">
+                            <summary class="flex hover:cursor-pointer">
+                                Mijn specialisaties
+                                <img src="./images/arrow.svg" alt="Arrow icon" class="-rotate-90 w-2 ml-2">
+                            </summary>
+                            <div class="dropdown-wrapper z-40 absolute bg-white top-full w-auto mt-2 left-0 shadow-lg p-4">
+                                <ul>
+                                    <li class="mb-4"><a class="hover:opacity-50 duration-150" href="./gezondheidsklachten.html">Gezondheidsklachten</a></li>
+                                    <li class="mb-4"><a class="hover:opacity-50 duration-150" href="./lichaamsgericht-werken.html">Lichaamsgericht werken</a></li>
+                                    <li class="mb-4"><a class="hover:opacity-50 duration-150" href="./natuurgerichte-principes.html">Natuurgerichte principes</a></li>
+                                </ul>
+                            </div>
+                        </details>
+                    </li>
+                    <li class="mx-2.5 lg:mx-4"><a class="hover:opacity-50 duration-150" href="./contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="mobile-menu lg:hidden absolute -top-52 md:-top-64 left-0 h-52 md:h-64 w-screen bg-white z-40">
+            <ul class="flex invisible flex-col items-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                <li class="mx-2.5 mb-6 lg:mx-4"><a class="hover:opacity-50 duration-150" href="./effecten.html">Effecten</a></li>
+                <li class="mx-2.5 mb-6 lg:mx-4"><a class="hover:opacity-50 duration-150" href="./over-mij.html">Over mij</a></li>
+                <li class="mx-2.5 mb-6 lg:mx-4 relative">
+                    <details class="myDropdown">
+                        <summary class="flex">
+                            Mijn specialisaties
+                            <img src="./images/arrow.svg" alt="Arrow icon" class="-rotate-90 w-2 ml-2">
+                        </summary>
+                        <div class="dropdown-wrapper absolute bg-white top-full left-0 shadow-lg p-4">
+                            <ul>
+                                <li class="mb-5"><a class="hover:opacity-50 duration-150" href="./gezondheidsklachten.html">Gezondheidsklachten</a></li>
+                                <li class="mb-5"><a class="hover:opacity-50 duration-150" href="./lichaamsgericht-werken.html">Lichaamsgericht werken</a></li>
+                                <li class="mb-5"><a class="hover:opacity-50 duration-150" href="./natuurgerichte-principes.html">Natuurgerichte principes</a></li>
+                            </ul>
+                        </div>
+                    </details>
+                </li>
+                <li class="mx-2.5 mb-6 lg:mx-4"><a class="hover:opacity-50 duration-150" href="./contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero image -->
+    <div id="page_content" class="min-h-screen relative relative w-full mb-12 border-b-2 pb-12 lg:border-none lg:pb-0 lg:mb-6">
+        <div id="page_image" class="relative mt-[84px] lg:mt-0 h-[60vh] mt-[84px] lg:mt-0 bg-[url('./images/beenmassage.jpg')] bg-cover bg-center lg:w-1/2 lg:float-left"></div>
+        <!-- <div class="absolute h-[60vh] bg-black left-0 top-0 w-full lg:w-1/2 lg:float-left opacity-50"></div> -->
+        <div class="relative container mx-auto px-8 mt-12 md:px-20 lg:float-left lg:w-1/2 lg:mt-64">
+            <h2 class="text-[#B51729] font-bold text-3xl mb-6">Lichaamsgericht werken</h2>
+            <p class="text-black max-w-lg mb-3">
+                <span class="font-bold">
+                    Werkwijze op jou afgestemd
+                </span>
+                <br><br>
+                Om een optimaal resultaat te krijgen, is het belangrijk jouw gezondheidsklacht vooraf goed kenbaar te maken. Behandelingen zijn daarom op afspraak. Afspraken kun je het beste via een telefonisch contact maken. Uit het telefonisch gesprek en zo nodig een door jou vooraf in te vullen intakeformulier kan ik mij dan al een beeld vormen over de best passende behandeling. Tevens kan hierdoor tijd voor anamnese en intake in een behandeling verminderd worden. Je hebt geen verwijzing van de huisarts nodig.
+                <br><br>
+                Afhankelijk van de klacht stellen we samen een behandelplan op. In de praktijk maak ik gebruik van Thaise yogamassage, acupressuur, reflexologie en lichaamsgerichte coaching. De thaise massage bestaat uit een op elkaar afgestemde en heel doeltreffende combinatie van yoga, massage, mindfulness en acupressuur. Je wordt in makkelijk zittende kleding aan de yoga ontleende strekkingen bewogen en tegelijkertijd gemasseerd. Door mindfulness werkt deze heel heilzame massagevorm op een nog veel diepgaander niveau door.
+                <br><br>
+                In de behandeling geef ik ter bevordering van het herstelproces indien nodig ook oefeningen en of huiswerkopdrachten mee voor thuis.
+            </p>
+        </div>
+        <div class="clear-both"></div>
+    </div>
+
+    <div class="py-4 mx-auto container max-w-xl sm:flex sm:justify-around">
+        <span class="w-auto text-center block sm:float-left">06-12144084</span>
+        <div class="w-auto text-center block sm:float-left pt-4 sm:p-0">
+            <span class="mb-20">
+                info@youryinyang.nl
+            </span>
+            <div class="pt-2">
+                <a href="https://www.linkedin.com/in/mattie-janssen-5b106b7/" target="_blank" class="underline mr-4 hover:opacity-50 duration-150">
+                    LinkedIn
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=100065915088971" target="_blank" class="underline hover:opacity-50 duration-150">
+                    Facebook
+                </a>
+            </div>
+        </div>
+        <span class="w-auto text-center block sm:float-left pt-4 sm:p-0">kvk-nr 54294029</span>
+        <div class="clear-both"></div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

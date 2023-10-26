@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YourYinYang</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./fonts/stylesheet.css">
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body class="overflow-x-hidden w-full">
+    <!-- Navbar -->
+    <div id="page-cover" class="bg-black hidden opacity-0 z-[39] fixed top-0 left-0 w-screen h-screen">overlay</div>
+    <nav class="navbar fixed lg:relative w-full left-0 top-0 h-auto z-50">
+        <div class="absolute bg-white w-full flex z-50 justify-between items-center px-4 py-4 pr-8 md:pr-16 lg:bg-white lg:top-20 lg:w-11/12 lg:right-0 lg:h-32 lg:p-0">
+            <a href="./index.html" class="max-w-[225px]">
+                <picture>
+                    <source media="(min-width:1024px)" srcset="./images/logo-tekst-rechts--rood.svg">
+                    <source media="(min-width:768px)" srcset="./images/logo--rood.svg">
+                    <img src="./images/logo-tekst-rechts--rood.svg" alt="Logo YourYinYang" class="h-16 md:h-20 md:ml-8 xl:h-32">
+                </picture>
+            </a>
+            <div class="block w-8 lg:hidden flex justify-center items-center">
+                <div class="w-8 mobile-menu-button block lg:hidden text-center item-center relative">
+                    <span class="icon-top w-full h-1 bg-[#B51729] block w-9 relative rounded origin-center "></span>
+                    <span class="icon-center w-full h-1 bg-[#B51729] block w-9 relative rounded origin-center my-2"></span>
+                    <span class="icon-bottom w-full h-1 bg-[#B51729] block w-9 relative rounded origin-center"></span>
+                </div>
+            </div>
+            <div class="hidden lg:block">
+                <ul class="flex flex-row pr-8 lg:pr-12 xl:pr-20">
+                    <li class="mx-2.5 lg:mx-4"><a class="hover:opacity-50 duration-150" href="./effecten.html">Effecten</a></li>
+                    <li class="mx-2.5 lg:mx-4"><a class="hover:opacity-50 duration-150" href="./over-mij.html">Over mij</a></li>
+                    <li class="mx-2.5 lg:mx-4 relative">
+                        <details class="myDropdown">
+                            <summary class="flex hover:cursor-pointer">
+                                Mijn specialisaties
+                                <img src="./images/arrow.svg" alt="Arrow icon" class="-rotate-90 w-2 ml-2">
+                            </summary>
+                            <div class="dropdown-wrapper z-40 absolute bg-white top-full w-auto mt-2 left-0 shadow-lg p-4">
+                                <ul>
+                                    <li class="mb-4"><a class="hover:opacity-50 duration-150" href="./gezondheidsklachten.html">Gezondheidsklachten</a></li>
+                                    <li class="mb-4"><a class="hover:opacity-50 duration-150" href="./lichaamsgericht-werken.html">Lichaamsgericht werken</a></li>
+                                    <li class="mb-4"><a class="hover:opacity-50 duration-150" href="./natuurgerichte-principes.html">Natuurgerichte principes</a></li>
+                                </ul>
+                            </div>
+                        </details>
+                    </li>
+                    <li class="mx-2.5 lg:mx-4"><a class="hover:opacity-50 duration-150" href="./contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="mobile-menu lg:hidden absolute -top-52 md:-top-64 left-0 h-52 md:h-64 w-screen bg-white z-40">
+            <ul class="flex invisible flex-col items-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                <li class="mx-2.5 mb-6 lg:mx-4"><a class="hover:opacity-50 duration-150" href="./effecten.html">Effecten</a></li>
+                <li class="mx-2.5 mb-6 lg:mx-4"><a class="hover:opacity-50 duration-150" href="./over-mij.html">Over mij</a></li>
+                <li class="mx-2.5 mb-6 lg:mx-4 relative">
+                    <details class="myDropdown">
+                        <summary class="flex">
+                            Mijn specialisaties
+                            <img src="./images/arrow.svg" alt="Arrow icon" class="-rotate-90 w-2 ml-2">
+                        </summary>
+                        <div class="dropdown-wrapper absolute bg-white top-full left-0 shadow-lg p-4">
+                            <ul>
+                                <li class="mb-5"><a class="hover:opacity-50 duration-150" href="./gezondheidsklachten.html">Gezondheidsklachten</a></li>
+                                <li class="mb-5"><a class="hover:opacity-50 duration-150" href="./lichaamsgericht-werken.html">Lichaamsgericht werken</a></li>
+                                <li class="mb-5"><a class="hover:opacity-50 duration-150" href="./natuurgerichte-principes.html">Natuurgerichte principes</a></li>
+                            </ul>
+                        </div>
+                    </details>
+                </li>
+                <li class="mx-2.5 mb-6 lg:mx-4"><a class="hover:opacity-50 duration-150" href="./contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="site-message h-8"></div>
+
+    <!-- Hero image -->
+    <div id="page_content" class="relative relative w-full mb-12 border-b-2 pb-12 lg:border-none lg:pb-0 lg:mb-6">
+        <div id="page_image" class="overmij-image relative h-[60vh] mt-[84px] lg:mt-0 bg-[url('./images/portretfoto.jpg')] bg-cover bg-center lg:w-1/2 lg:float-left"></div>
+        <div class="relative container mx-auto px-8 mt-12 md:px-20 lg:float-left lg:w-1/2 lg:mt-64">
+            <h2 class="text-[#B51729] font-bold text-3xl mb-6">Over mij</h2>
+            <p class="text-black max-w-lg mb-3 font-bold">
+                En de achtergrond van mijn
+                werk als natuurgeneeskundig therapeut
+            </p>
+            <p class="text-black max-w-lg mb-5">
+                Hoi, mijn naam is Mattie Janssen. Al in mijn jeugd ben ik geboeid geraakt hoe gewerkt wordt met lichaamsenergie, leefstijl en gezondheidszorg in het verre oosten.
+                Ik wist toen ook al dat ik mensen graag help gezonder en energieker te worden.
+                Het duurde echter nog jaren eer ik de mogelijkheid ging inzien dat ik mensen kan helpen door mijzelf oosterse gezondheidszorg eigen te maken.
+            </p>
+            <p class="text-black max-w-lg mb-5">
+                Hierop heb ik een 3-jarige beroepsopleiding tot natuurgeneeskundig therapeut in de thaise yogamassage gevolgd.
+                Om een brug te maken van de oosterse naar de westerse gezondheidszorg heb ik ook de opleiding HBO medische basiskennis gevolgd.
+                Middels diverse vervolgopleidingen heb ik vanaf 2012 in de praktijk een unieke combinatie kunnen maken aan kennis van en vaardigheden in oosterse en westerse natuurgeneeskundige gezondheidszorg.
+                Regelmatig school ik mij hierin bij.                
+            </p>
+            <p class="text-black max-w-lg mb-3">
+                Aan de basis van de behandelingen ligt veelal de oosterse gezondheidsleer waarbij naar de gehele mens gekeken wordt. Hierin beïnvloeden bijvoorbeeld lichaam en geest elkaar. In de behandelingen kijk ik daarom niet alleen naar symptomen maar ook naar de mogelijke oorzaak die aan de gezondheidsklacht ten grondslag ligt.
+                Door het opheffen van blokkades help ik jouw natuurlijke balans in Yin en Yang energie te herstellen.                
+            </p>
+        </div>
+        <div class="clear-both"></div>
+    </div>
+
+    <div class="py-4 mx-auto container max-w-xl sm:flex sm:justify-around">
+        <span class="w-auto text-center block sm:float-left">06-12144084</span>
+        <div class="w-auto text-center block sm:float-left pt-4 sm:p-0">
+            <span class="mb-20">
+                info@youryinyang.nl
+            </span>
+            <div class="pt-2">
+                <a href="https://www.linkedin.com/in/mattie-janssen-5b106b7/" target="_blank" class="underline mr-4 hover:opacity-50 duration-150">
+                    LinkedIn
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=100065915088971" target="_blank" class="underline hover:opacity-50 duration-150">
+                    Facebook
+                </a>
+            </div>
+        </div>
+        <span class="w-auto text-center block sm:float-left pt-4 sm:p-0">kvk-nr 54294029</span>
+        <div class="clear-both"></div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
