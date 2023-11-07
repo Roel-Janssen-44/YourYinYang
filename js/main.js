@@ -16,6 +16,25 @@ $(document).ready(function () {
     $("#page_image").height(elemHeight + 100);
   }
 
+  $(window).on("resize", function () {
+    const pageCover = document.querySelector("#page-cover");
+    const myDetails = document.querySelector(".myDropdown");
+    pageCover.addEventListener("click", () => {
+      myDetails.open = false;
+      pageCover.classList.add("hidden");
+    });
+    if ($(window).width() > 1023) {
+      let elemHeight = $("#wie-ben-ik").height();
+      let elemHeight2 = $("#specialisaties").height();
+      // if(elemHeight > elemHeight2) return;
+      $("#specialisaties").height(elemHeight);
+    }
+    if ($(window).width() > 1023) {
+      let elemHeight = $("#page_content").height();
+      $("#page_image").height(elemHeight + 100);
+    }
+  });
+
   // Navbar animations
   const btn = document.querySelector(".mobile-menu-button");
   const nav = document.querySelector(".navbar");

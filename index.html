@@ -13,8 +13,8 @@
 </head>
 
 <body class="min-h-screen overflow-x-hidden">
-    <div id="page-cover" class="bg-black hidden opacity-0 z-[39] fixed top-0 left-0 w-screen h-screen">overlay</div>
-    <nav class="navbar fixed lg:relative w-full left-0 top-0 h-auto z-50">
+    <div id="page-cover" class="bg-black hidden opacity-0 z-[39] fixed top-0 left-0 w-screen h-screen max-h-screen">overlay</div>
+    <nav class="navbar fixed lg:relative w-full left-0 top-0 h-auto z-50 max-h-screen">
         <div class="absolute bg-white w-full flex z-50 justify-between items-center px-4 py-4 pr-8 md:pr-16 lg:bg-white lg:top-20 lg:w-11/12 lg:right-0 lg:h-32 lg:p-0">
             <a href="./index.html" class="max-w-[225px]">
                 <picture>
@@ -82,7 +82,9 @@
 
     <!-- Hero image -->
     <div id="main-hero" class="h-screen relative w-full mb-12 md:mb-0">
-        <div class="absolute top-0 left-0 w-full h-full bg-[url('./images/hero-image.jpg')] bg-cover bg-center md:w-1/2"></div>
+        <div class="absolute top-0 left-0 w-full h-full md:w-1/2">
+            <img class="w-full h-full relative object-fit block" src="./images/hero-image.jpg" alt="">
+        </div>
         <div class="bg-white opacity-25 absolute top-0 left-0 w-full h-full"></div>
         <div class="absolute top-[35%] left-0 w-full px-4 md:left-1/2 md:w-1/2 ">
             <h1 class="font-bold mb-20 text-4xl leading-[3.5rem] text-[#B51729] text-center libre xl:text-5xl xl:leading-[4.5rem]">Een gezonder<br> en energieker gevoel</h1>
