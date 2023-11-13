@@ -12,6 +12,16 @@
     <meta name="keywords" content="YourYinYang, fysiotherapie, massage, frozen shoulder, hernia, tenniselleboog, muisarm en coaching">
 </head>
 
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2VGZY7F3T6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-2VGZY7F3T6');
+</script>
+
 <body class="min-h-screen overflow-x-hidden">
     <div id="page-cover" class="bg-black hidden opacity-0 z-[39] fixed top-0 left-0 w-screen h-screen max-h-screen">overlay</div>
     <nav class="navbar fixed lg:relative w-full left-0 top-0 h-auto z-50 max-h-screen">
@@ -49,7 +59,7 @@
                             </div>
                         </details>
                     </li>
-                    <li class="mx-2.5 lg:mx-4"><a class="hover:opacity-50 duration-150" href="./contact.html">Contact</a></li>
+                    <li class="mx-2.5 lg:mx-4"><a class="hover:opacity-50 duration-150" href="./praktijk.html">Praktijk</a></li>
                     <li class="mx-2.5 lg:mx-4"><a class="hover:opacity-50 duration-150" href="./contact.html">Contact</a></li>
                 </ul>
             </div>
@@ -136,24 +146,40 @@
         <h3 class="z-20 relative px-12 text-white text-center text-3xl font-bold mb-24 libre">Samen stappen zetten</h3>
         <a href="./contact.html" class="z-20 px-8 py-3 mx-0 bg-[#B51729] absolute bottom-12 left-1/2 -translate-x-1/2 text-white libre text-center hover:opacity-80 duration-150">Ja, ik wil minder pijn en meer ruimte!</a>
     </div>
-    <div class="py-4 mx-auto container max-w-xl sm:flex sm:justify-around">
-        <span class="w-auto text-center block sm:float-left">06-12144084</span>
-        <div class="w-auto text-center block sm:float-left pt-4 sm:p-0">
-            <span class="mb-20">
-                info@youryinyang.nl
-            </span>
-            <div class="pt-2">
-                <a href="https://www.linkedin.com/in/mattie-janssen-5b106b7/" target="_blank" class="underline mr-4 hover:opacity-50 duration-150">
-                    LinkedIn
-                </a>
-                <a href="https://www.facebook.com/profile.php?id=100065915088971" target="_blank" class="underline hover:opacity-50 duration-150">
-                    Facebook
-                </a>
-            </div>
+    <footer>
+        <div class="flex flex-row justify-center gap-1 items-center container max-w-md mx-auto py-3">
+            <ul class="flex flex-col justify-center text-right gap-2 flex-row sm:w-1/2">
+                <li class="my-2 min-w-[100px]">06-12144084</li>
+                <li class="my-2">
+                    <a href="https://www.linkedin.com/in/mattie-janssen-5b106b7/" target="_blank" class="underline hover:opacity-50 duration-150">
+                        LinkedIn
+                    </a>
+                </li>
+            </ul>
+            <ul style="width: 10px;" class="flex text-center flex-col justify-center gap-2 flex-row sm:w-1/2">
+                <li class="my-2">|</li>
+                <li class="my-2">|</li>
+            </ul>
+            <ul class="flex flex-col justify-center sm:text-left gap-2 flex-row sm:w-1/2">
+                <li class="my-2">info@youryinyang.nl</li>
+                <li class="my-2">
+                    <a href="https://www.facebook.com/profile.php?id=100065915088971" target="_blank" class="underline hover:opacity-50 duration-150">
+                        Facebook
+                    </a>
+                </li>
+            </ul>
         </div>
-        <span class="w-auto text-center block sm:float-left pt-4 sm:p-0">kvk-nr 54294029</span>
-        <div class="clear-both hidden"></div>
-    </div>
+        <ul class="container relative mx-auto max-w-2xl flex flex-row flex-wrap md:flex-row justify-around sm:justify-between">
+            <li class="my-2 order-3 sm:order-1">copyright © YourYinYang <script>document.write(new Date().getFullYear())</script></li>
+            <li class="my-2 order-1 sm:order-2 sm:absolute sm:top-0 sm:left-1/2 sm:-translate-x-1/2">
+                <a href="./algemene-voorwaarden.html" target="_blank" class="underline hover:opacity-50 duration-150">
+                    algemene voorwaarden
+                </a>
+            </li>
+            <li class="my-2 order-2 sm:order-3">kvk-nr 54294029</li>
+        </ul>
+    </footer>
+
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
